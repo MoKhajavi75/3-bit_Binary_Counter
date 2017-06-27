@@ -9,6 +9,8 @@ const int Third_LED = 5;   //connected to digital pin 13
 
 void setup()
 {
+  Serial.begin(9600);   //Set the serial conncetion to check the result in Serial Monitor
+  
   pinMode(First_LED, OUTPUT);   //set digital pin as output
   pinMode(Second_LED, OUTPUT);   //set digital pin as output
   pinMode(Third_LED, OUTPUT);   //set digital pin as output
@@ -30,9 +32,13 @@ void loop()
       digitalWrite(First_LED, HIGH);
 
     delay(1000);
+    Serial.print("Number is = ");
+    Serial.print(i);
+    Serial.println();
 
   reset();    //turn ALL LEDs off
     }
+    Serial.println();
 }
 
 void reset (void)
@@ -41,4 +47,3 @@ void reset (void)
     digitalWrite(Second_LED, LOW);
     digitalWrite(Third_LED, LOW);
 }
-
