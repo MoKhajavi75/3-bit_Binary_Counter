@@ -32,6 +32,7 @@ void loop()
       digitalWrite(First_LED, HIGH);
 
     delay(1000);
+    
     Serial.print("Number is = ");
     Serial.print(i);
     Serial.println();
